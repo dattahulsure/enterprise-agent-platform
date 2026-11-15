@@ -1,0 +1,11 @@
+services:
+  platform:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      AGENT_DB: /data/agent_platform.sqlite3
+    volumes:
+      - platform_data:/data
+volumes:
+  platform_data:
